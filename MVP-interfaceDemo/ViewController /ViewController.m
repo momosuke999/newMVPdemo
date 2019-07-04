@@ -70,15 +70,20 @@ static NSString * const reuserId = @"reuserId";
         }
 
         
-        
+
         
         NSDictionary * imageURLs = model.images;
          NSString * imageURL =[imageURLs objectForKey:@"small"];
-         [cell.filmIconLabel sd_setImageWithURL:[NSURL URLWithString:imageURL]];
+        [cell.filmIconLabel sd_setImageWithURL:[NSURL URLWithString:imageURL]];
+
+      //  NSURL * imagurl = [NSURL URLWithString:imageURL];
+        //  UIImage * image =[UIImage imageWithData: [NSData dataWithContentsOfURL:imagurl]];
+          // cell.filmIconLabel.image = image;
     }];
     [self.dataSource addMyDataArray:self.presenter.myDataArray];
     self.view.backgroundColor =[UIColor whiteColor];
     [self.view addSubview:self.tableView];
+    self.tableView.tableFooterView = [UIView new];
     self.tableView.dataSource = self.dataSource;
     self.tableView.delegate = self.dataSource;
 }
@@ -86,7 +91,7 @@ static NSString * const reuserId = @"reuserId";
 
 -(UITableView*) tableView{
     if(!_tableView){
-        _tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
+        _tableView = [[UITableView alloc] initWithFrame:self.view.bounds];
         _tableView.backgroundColor = [UIColor whiteColor];
         [_tableView registerClass:[MvpCell class] forCellReuseIdentifier:reuserId];
     }

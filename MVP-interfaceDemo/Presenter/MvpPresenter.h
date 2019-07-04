@@ -8,7 +8,7 @@
 
 #import "MvpViewProtcol.h"
 #import "MvpCell.h"
-#import <UIKit/UIKit.h>
+//#import <UIKit/UIKit.h>
 
 @interface MvpPresenter:NSObject
 @property(nonatomic, strong)NSMutableArray * myDataArray;
