@@ -56,21 +56,7 @@
         [self.myDataArray addObject:model];
     }
     
-    /*
-    NSString * pathString =  [[NSBundle mainBundle]pathForResource:@"data" ofType:@"txt"];
-    NSString *textFieldContents=[NSString stringWithContentsOfFile:pathString encoding:NSUTF8StringEncoding error:nil];
-    NSData * getJsonData = [textFieldContents dataUsingEncoding:NSUTF8StringEncoding];
-    
-    NSDictionary * getDict = [NSJSONSerialization JSONObjectWithData:getJsonData options:kNilOptions error:nil];
-    //  NSLog(@"--textFieldContents---%@-----",getDict);
-    
-    NSArray *  subjectsArray = getDict[@"subjects"];
 
-    // dataArray = [[NSMutableArray alloc] init];
-    for (NSDictionary * tempDict in subjectsArray) {
-        MvpModel* model = [MvpModel mvpModelWithDict:tempDict];
-        [self.myDataArray addObject:model];
-    }*/
 }
 
 
